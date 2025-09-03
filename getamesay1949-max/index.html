@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VidForge AI — Create Videos with AI</title>
+  <meta name="description" content="VidForge AI helps you plan, generate, and publish high-quality videos using AI—scripts, voiceovers, stock, subtitles, and more." />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VidForge AI — Create Videos with AI" />
+  <meta property="og:description" content="Plan, generate, and publish high-quality videos using AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-auto">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner" aria-label="Primary">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="VidForge AI home">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4h8l8 8-8 8H4V4z" fill="currentColor" opacity=".15"></path>
+          <path d="M12 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="9" cy="9" r="2" fill="currentColor"></circle>
+        </svg>
+        <span>VidForge <strong>AI</strong></span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="desktopNav">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#templates">Templates</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="btn btn-ghost">Contact</a></li>
+          <li><button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="#features" data-close>Features</a></li>
+        <li><a href="#templates" data-close>Templates</a></li>
+        <li><a href="#pricing" data-close>Pricing</a></li>
+        <li><a href="#faq" data-close>FAQ</a></li>
+        <li><a href="#contact" data-close>Contact</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <button id="themeToggleMobile" class="btn btn-ghost">Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Create studio-quality videos with <span class="grad">VidForge AI</span></h1>
+          <p>Write a prompt. Pick a style. VidForge AI handles scriptwriting, voiceover, stock footage, subtitles, and exports—fast.</p>
+          <div class="hero-actions">
+            <a href="#signup" class="btn btn-primary" id="ctaStart">Start for Free</a>
+            <a href="#templates" class="btn btn-ghost">Browse Templates</a>
+          </div>
+          <div class="hero-trust">
+            <span>Trusted by creators, marketers & educators</span>
+            <div class="logo-row" aria-hidden="true">
+              <span class="pill">YouTube</span>
+              <span class="pill">TikTok</span>
+              <span class="pill">Instagram</span>
+              <span class="pill">LinkedIn</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <button class="video-frame" id="openPreview" aria-label="Play demo video">
+            <div class="play">▶</div>
+            <img src="assets/hero-thumb.jpg" alt="VidForge AI demo preview" />
+          </button>
+          <div class="hero-stats">
+            <div><strong>10x</strong><span>Faster Production</span></div>
+            <div><strong>25+</strong><span>Smart Templates</span></div>
+            <div><strong>4K</strong><span>Export Ready</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Everything you need to ship videos</h2>
+          <p>From ideas to exports—automate the boring parts and keep full creative control.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="card">
+            <div class="icon">🧠</div>
+            <h3>AI Script & Storyboard</h3>
+            <p>Turn a prompt or outline into a video script with scene breakdowns, beats, and b-roll suggestions.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎙️</div>
+            <h3>Voiceovers & Captions</h3>
+            <p>Natural voices in 40+ languages, auto-captions, speaker labeling and timing controls.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎞️</div>
+            <h3>Smart Media</h3>
+            <p>Auto-match stock clips, images, and music to your script; keep brand style consistent.</p>
+          </article>
+          <article class="card">
+            <div class="icon">⚡</div>
+            <h3>One-Click Export</h3>
+            <p>Render 9:16, 1:1, 16:9 in up to 4K. Publish directly to YouTube, TikTok, and more.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates -->
+    <section id="templates" class="section alt">
+      <div class="container">
+        <header class="section-head row">
+          <div>
+            <h2>Kickstart with templates</h2>
+            <p>Pick a style and customize. Save your own as presets.</p>
+          </div>
+          <div class="filters">
+            <label for="templateFilter" class="sr-only">Filter templates</label>
+            <select id="templateFilter" class="select">
+              <option value="all">All</option>
+              <option value="promo">Promo</option>
+              <option value="tutorial">Tutorial</option>
+              <option value="news">News</option>
+              <option value="reels">Reels/Shorts</option>
+            </select>
+          </div>
+        </header>
+
+        <div class="template-grid" id="templateGrid" aria-live="polite">
+          <!-- Template cards (JS can filter by data-type) -->
+          <article class="tcard" data-type="promo">
+            <div class="thumb">
+              <span class="badge">Promo</span>
+              <img src="assets/templates/promo-1.jpg" alt="Promo template thumbnail" />
+            </div>
+            <h3>Product Spotlight</h3>
+            <p>30-60s product promo with kinetic text and upbeat music.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+
+          <article class="tcard" data-type="tutorial">
+            <div class="thumb">
+              <span class="badge">Tutorial</span>
+              <img src="assets/templates/tutorial-1.jpg" alt="Tutorial template thumbnail" />
+            </div>
+            <h3>How-To Explainer</h3>
+            <p>Step-by-step layout with chapter markers and overlays.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+
+          <article class="tcard" data-type="news">
+            <div class="thumb">
+              <span class="badge">News</span>
+              <img src="assets/templates/news-1.jpg" alt="News template thumbnail" />
+            </div>
+            <h3>News Recap</h3>
+            <p>Clean lower-thirds, ticker, and anchor layout for updates.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+
+          <article class="tcard" data-type="reels">
+            <div class="thumb">
+              <span class="badge">Reels</span>
+              <img src="assets/templates/reel-1.jpg" alt="Reel template thumbnail" />
+            </div>
+            <h3>Hook & Punch</h3>
+            <p>9:16 shorts with bold captions and beat-synced cuts.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+
+          <article class="tcard" data-type="tutorial">
+            <div class="thumb">
+              <span class="badge">Tutorial</span>
+              <img src="assets/templates/tutorial-2.jpg" alt="Tutorial template thumbnail" />
+            </div>
+            <h3>Screen Walkthrough</h3>
+            <p>Overlay cursor highlights, zooms, and callouts for clarity.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+
+          <article class="tcard" data-type="promo">
+            <div class="thumb">
+              <span class="badge">Promo</span>
+              <img src="assets/templates/promo-2.jpg" alt="Promo template thumbnail" />
+            </div>
+            <h3>Event Teaser</h3>
+            <p>High-energy cut with countdowns and animated stickers.</p>
+            <div class="tc-actions">
+              <button class="btn btn-ghost" data-preview>Preview</button>
+              <button class="btn btn-primary" data-use>Use Template</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section-head row">
+          <div>
+            <h2>Simple pricing</h2>
+            <p>Choose monthly or annual billing. Cancel anytime.</p>
+          </div>
+          <div class="billing-toggle">
+            <span>Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="billingToggle" aria-label="Toggle annual billing" />
+              <span class="slider"></span>
+            </label>
+            <span>Annual <small class="save">Save 20%</small></span>
+          </div>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Free</h3>
+            <p class="price"><span data-price data-monthly="0" data-annual="0">$0</span><span class="per">/mo</span></p>
+            <ul class="list">
+              <li>Up to 3 projects</li>
+              <li>720p exports</li>
+              <li>Watermark</li>
+              <li>Community support</li>
+            </ul>
+            <a href="#signup" class="btn btn-outline">Get Started</a>
+          </article>
+
+          <article class="price-card popular" aria-label="Most popular plan">
+            <div class="ribbon">Most Popular</div>
+            <h3>Creator</h3>
+            <p class="price"><span data-price data-monthly="19" data-annual="15">$19</span><span class="per">/mo</span></p>
+            <ul class="list">
+              <li>Unlimited projects</li>
+              <li>1080p exports</li>
+              <li>No watermark</li>
+              <li>Stock media library</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#signup" class="btn btn-primary">Start Creator</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Pro Studio</h3>
+            <p class="price"><span data-price data-monthly="49" data-annual="39">$49</span><span class="per">/mo</span></p>
+            <ul class="list">
+              <li>4K exports</li>
+              <li>Team collaboration</li>
+              <li>Brand kits</li>
+              <li>Advanced captioning</li>
+              <li>API access</li>
+            </ul>
+            <a href="#signup" class="btn btn-outline">Go Pro</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Loved by creators</h2>
+          <p>Here’s what early users say about VidForge AI.</p>
+        </header>
+
+        <div class="testimonials">
+          <figure class="quote">
+            <blockquote>“VidForge AI cut our campaign video time from days to hours—without compromising quality.”</blockquote>
+            <figcaption>— Mikal, Growth Marketer</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“The script + voiceover combo is scary good. Subtitles were spot on.”</blockquote>
+            <figcaption>— Hana, Solo Creator</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Templates are clean and flexible. Our training videos look pro now.”</blockquote>
+            <figcaption>— Dawit, L&D Lead</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup / Contact -->
+    <section id="signup" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Get early access</h2>
+          <p>Join the waitlist. We’ll email you when your workspace is ready.</p>
+        </header>
+
+        <form id="signupForm" class="form" novalidate>
+          <div class="grid-2">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <label class="field">
+            <span>Use case</span>
+            <select name="usecase" required>
+              <option value="">Select one…</option>
+              <option>Content Creator</option>
+              <option>Marketing</option>
+              <option>Education</option>
+              <option>News/Media</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>What do you want to create?</span>
+            <textarea name="message" rows="4" placeholder="Tell us about your videos…"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Join Waitlist</button>
+            <p id="formStatus" role="status" aria-live="polite" class="form-status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Frequently asked questions</h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>Can I use my own footage and brand assets?</summary>
+            <p>Yes! Upload your footage, logos, fonts, and color styles. Save them as brand kits to apply across videos.</p>
+          </details>
+          <details>
+            <summary>Is there a watermark on the free plan?</summary>
+            <p>Free plan exports include a small watermark. Creator and Pro Studio remove watermarks.</p>
+          </details>
+          <details>
+            <summary>Do you support multi-language captions?</summary>
+            <p>Absolutely. Auto-captions support 40+ languages with timing edits from the caption editor.</p>
+          </details>
+          <details>
+            <summary>How does pricing work?</summary>
+            <p>Switch between monthly and annual billing. Annual plans save 20% and include bonus render credits.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <a class="brand" href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h8l8 8-8 8H4V4z" fill="currentColor" opacity=".15"></path>
+            <path d="M12 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <circle cx="9" cy="9" r="2" fill="currentColor"></circle>
+          </svg>
+          <span>VidForge <strong>AI</strong></span>
+        </a>
+        <p class="muted">Create videos at the speed of thought.</p>
+        <div class="social">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="link-cols">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Licenses</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> VidForge AI. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="previewModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <header class="modal-head">
+        <h3 id="modalTitle">Template Preview</h3>
+        <button class="icon-btn" data-close aria-label="Close preview">✕</button>
+      </header>
+      <div class="modal-body">
+        <div class="video-embed">
+          <!-- Replace src with your demo video link -->
+          <video controls preload="metadata" width="100%" poster="assets/preview-poster.jpg">
+            <source src="assets/demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <footer class="modal-foot">
+        <button class="btn btn-ghost" data-close>Close</button>
+        <a href="#signup" class="btn btn-primary">Use This Template</a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
